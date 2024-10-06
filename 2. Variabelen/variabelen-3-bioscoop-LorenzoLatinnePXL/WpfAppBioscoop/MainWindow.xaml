@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfAppBioscoop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBioscoop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="100,50,0,0" TextWrapping="Wrap" Text="Geef aantal tickets per soort in:" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,125,0,0" TextWrapping="Wrap" Text="Normaal tarief:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,170,0,0" TextWrapping="Wrap" Text="Kortingstarief:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,215,0,0" TextWrapping="Wrap" Text="Studentenkaart:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,260,0,0" TextWrapping="Wrap" Text="Prijs:" VerticalAlignment="Top"/>
+        <TextBox x:Name="normalTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="315,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="reductionTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="315,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="studentTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="315,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="priceToPayTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="315,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="BerekenenKnop" Content="Berekenen" HorizontalAlignment="Left" Margin="527,137,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="calculateButton"/>
+        <Button x:Name="WissenKnop" Content="Wissen" HorizontalAlignment="Left" Margin="527,187,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Button x:Name="AfsluitenKnop" Content="Afsluiten" HorizontalAlignment="Left" Margin="527,237,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="closeButton_Click"/>
+        <TextBlock Name="errorText" HorizontalAlignment="Left" Margin="250,310,0,0" TextWrapping="Wrap" Text="Geef enkel gehele getalen in." VerticalAlignment="Top" Width="250" Height="25" IsEnabled="False" Foreground="Red" FontFamily="Microsoft Tai Le" TextAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
+
+    </Grid>
+</Window>

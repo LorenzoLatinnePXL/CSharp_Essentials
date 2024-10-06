@@ -1,0 +1,18 @@
+﻿<Window x:Class="eur_naar_dol.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:eur_naar_dol"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="eurTextBox" HorizontalAlignment="Left" Margin="336,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="dollarTextBox" HorizontalAlignment="Left" Margin="336,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="540,233,0,0" VerticalAlignment="Top" Width="95" Height="40" Click="Button_Click"/>
+        <Button x:Name="convertButton" Content="Bereken" HorizontalAlignment="Left" Margin="540,143,0,0" VerticalAlignment="Top" Width="95" Height="40" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="189,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="25" Text="Bedrag in euro"/>
+        <TextBlock HorizontalAlignment="Left" Margin="189,245,0,0" TextWrapping="Wrap" Text="Bedrag in dollar" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

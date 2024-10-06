@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfAppKassa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppKassa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="100,135,0,0" TextWrapping="Wrap" Text="Ondernemingsnummer:" VerticalAlignment="Top" Width="147" Height="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,175,0,0" TextWrapping="Wrap" Text="Prijs:" VerticalAlignment="Top" Height="23" Width="147"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,215,0,0" TextWrapping="Wrap" Text="Aantal:" VerticalAlignment="Top" Width="147" Height="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,250,0,0" TextWrapping="Wrap" Text="Te betalen:" VerticalAlignment="Top" Width="147" Height="24"/>
+        <TextBox Name="VATNumberTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="10" HorizontalAlignment="Left" Margin="285,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="25"/>
+        <TextBox Name="checkNumberTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Left" Margin="440,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" Height="25"/>
+        <TextBox Name="priceTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="285,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="25"/>
+        <TextBox Name="amountTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="285,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="25"/>
+        <TextBox Name="amountToPayTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False" HorizontalAlignment="Left" Margin="285,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="25"/>
+        <Button Name="checkNumberButton" Content="Controle nummer" HorizontalAlignment="Left" Margin="550,97,0,0" VerticalAlignment="Top" Width="170" Height="33" Click="CheckNumber"/>
+        <Button Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="550,163,0,0" VerticalAlignment="Top" Width="170" Height="32" Click="Calculate"/>
+        <Button Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="550,228,0,0" VerticalAlignment="Top" Width="170" Height="33" Click="ClearInputs"/>
+        <Button Name="closeButton" Content="Sluiten" HorizontalAlignment="Left" Margin="550,294,0,0" VerticalAlignment="Top" Width="170" Height="33" Click="CloseProgram"/>
+        <TextBlock Name="invalidVATNumber" Visibility="Hidden" TextAlignment="Center" HorizontalAlignment="Left" Margin="285,101,0,0" TextWrapping="Wrap" Text="Ongeldig ondernemingsnummer" VerticalAlignment="Top" Width="200" Height="25" Foreground="Red"/>
+        <TextBlock Name="invalidPrice" Visibility="Hidden" TextAlignment="Center" HorizontalAlignment="Left" Margin="285,310,0,0" TextWrapping="Wrap" Text="De prijs kan niet kleiner zijn dan 0." VerticalAlignment="Top" Width="200" Height="25" Foreground="Red"/>
+        <TextBlock Name="invalidAmount" Visibility="Hidden" TextAlignment="Center" HorizontalAlignment="Left" Margin="285,340,0,0" TextWrapping="Wrap" Text="Het aantal kan niet kleiner zijn dan 0." VerticalAlignment="Top" Width="200" Height="25" Foreground="Red"/>
+    </Grid>
+</Window>

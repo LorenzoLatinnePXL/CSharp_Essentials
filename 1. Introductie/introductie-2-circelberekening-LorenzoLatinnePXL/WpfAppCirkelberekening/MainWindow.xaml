@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfAppCirkelberekening.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCirkelberekening"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Straal (in cm)" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="120" Height="25" HorizontalContentAlignment="Center"/>
+        <Label Content="Omtrek (in cm)" HorizontalAlignment="Left" Margin="150,190,0,0" VerticalAlignment="Top" Width="120" Height="25" HorizontalContentAlignment="Center"/>
+        <Label Content="Oppervlakte (in cm)" HorizontalAlignment="Left" Margin="150,230,0,0" VerticalAlignment="Top" Width="120" Height="25" HorizontalContentAlignment="Center"/>
+        <TextBox Name="straalInput" HorizontalAlignment="Left" Margin="300,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
+        <TextBox Name="omtrekInput" IsEnabled="False" HorizontalAlignment="Left" Margin="300,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
+        <TextBox Name="oppervlakteInput" IsEnabled="False" HorizontalAlignment="Left" Margin="300,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
+        <Button Name="berekenKnop" Content="Berekenen" HorizontalAlignment="Left" Margin="499,157,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="berekenKnop_Click"/>
+        <Button Name="wisKnop" Content="Wissen" HorizontalAlignment="Left" Margin="499,217,0,0" VerticalAlignment="Top" Width="75" Height="40" Click="wisKnop_Click"/>
+
+    </Grid>
+</Window>

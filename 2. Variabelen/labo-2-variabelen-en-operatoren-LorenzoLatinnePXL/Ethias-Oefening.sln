@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ethias-Oefening", "Ethias-Oefening\Ethias-Oefening.csproj", "{5C3C3245-2976-4CA3-82C5-D5BAE0170240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C3C3245-2976-4CA3-82C5-D5BAE0170240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3C3245-2976-4CA3-82C5-D5BAE0170240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3C3245-2976-4CA3-82C5-D5BAE0170240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3C3245-2976-4CA3-82C5-D5BAE0170240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C44043A4-BD5E-4D1C-96D5-70AC492F1EF5}
+	EndGlobalSection
+EndGlobal
