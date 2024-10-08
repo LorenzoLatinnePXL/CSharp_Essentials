@@ -92,6 +92,9 @@ namespace Iteratie_Oefeningen_Monitoriaat
             {
                 Console.WriteLine($"Het product tussen de twee getallen is: {product1 * product2}");
             }
+
+            // Oefening 7
+
             Console.ReadLine();
         }
     }
