@@ -40,9 +40,10 @@ namespace WpfAppBioscoop
             bool isValidReduction = int.TryParse(reductionTextBox.Text, out int reductionAmount);
             bool isValidStudent = int.TryParse(studentTextBox.Text, out int studentAmount);
 
-            if (!isValidNormal || !isValidReduction || !isValidStudent)
+            if (!isValidNormal || !isValidReduction || !isValidStudent || normalAmount < 0 || reductionAmount < 0 || studentAmount < 0)
             {
                 errorText.Visibility = Visibility.Visible;
+                priceToPayTextBox.Text = "";
             } else
             {
                 errorText.Visibility = Visibility.Hidden;

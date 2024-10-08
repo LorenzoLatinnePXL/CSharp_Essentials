@@ -19,7 +19,7 @@
         <Button x:Name="BerekenenKnop" Content="Berekenen" HorizontalAlignment="Left" Margin="527,137,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="calculateButton"/>
         <Button x:Name="WissenKnop" Content="Wissen" HorizontalAlignment="Left" Margin="527,187,0,0" VerticalAlignment="Top" Width="100" Height="30"/>
         <Button x:Name="AfsluitenKnop" Content="Afsluiten" HorizontalAlignment="Left" Margin="527,237,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="closeButton_Click"/>
-        <TextBlock Name="errorText" HorizontalAlignment="Left" Margin="250,310,0,0" TextWrapping="Wrap" Text="Geef enkel gehele getalen in." VerticalAlignment="Top" Width="250" Height="25" IsEnabled="False" Foreground="Red" FontFamily="Microsoft Tai Le" TextAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
+        <TextBlock Name="errorText" HorizontalAlignment="Left" Margin="250,310,0,0" TextWrapping="Wrap" Text="Geef enkel (positieve) gehele getalen in." VerticalAlignment="Top" Width="250" Height="25" IsEnabled="False" Foreground="Red" FontFamily="Microsoft Tai Le" TextAlignment="Center" FontWeight="Bold" Visibility="Hidden"/>
 
     </Grid>
 </Window>
