@@ -102,12 +102,10 @@ namespace PasswordMeter
                     resultTextBlock.Background = Brushes.Yellow;
                     break;
 
-                case 1:
-                    resultTextBlock.Text = "Je hebt een slecht wachtwoord gekozen";
-                    resultTextBlock.Background = Brushes.Red;
-                    break;
 
                 default:
+                    resultTextBlock.Text = "Je hebt een slecht wachtwoord gekozen";
+                    resultTextBlock.Background = Brushes.Red;
                     break;
             }
 
