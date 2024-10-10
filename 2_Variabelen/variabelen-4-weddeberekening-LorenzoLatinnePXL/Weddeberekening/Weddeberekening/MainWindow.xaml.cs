@@ -24,5 +24,47 @@ namespace Weddeberekening
         {
             InitializeComponent();
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            employeeNameTextBox.Clear();
+            hoursTextBox.Clear();
+            hourlyRateTextBox.Clear();
+        }
+
+        private void hourlyRateTextBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            double defaultHourlyRate = 17.85;
+            hourlyRateTextBox.Text = defaultHourlyRate.ToString();
+        }
+
+        private void hoursTextBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            int defaultHours = 1686;
+            hoursTextBox.Text = defaultHours.ToString();
+        }
+
+        private void CalculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            string employeeName = employeeNameTextBox.Text;
+            float hourlyRate = float.Parse(hourlyRateTextBox.Text);
+            int hours = int.Parse(hoursTextBox.Text);
+
+            float brutojaarwedde = hourlyRate * hours;
+            float belasting = brutojaarwedde * 0.3F;
+            float nettojaarwedde = brutojaarwedde - belasting;
+
+            outputTextBox.Text = $"LOONFICHE VAN {employeeName}\n" +
+                $"\nAantal gewerkte uren: {hours}" +
+                $"\nUurloon: € {hourlyRate}" +
+                $"\nBrutojaarwedde: € {brutojaarwedde}" +
+                $"\nBelasting: € {belasting}" +
+                $"\nNettojaarwedde: € {nettojaarwedde}";
+        }
     }
 }
