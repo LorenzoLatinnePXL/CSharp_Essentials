@@ -51,20 +51,32 @@ namespace Weddeberekening
 
         private void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
+            // Get employee name from TextBox
             string employeeName = employeeNameTextBox.Text;
-            float hourlyRate = float.Parse(hourlyRateTextBox.Text);
-            int hours = int.Parse(hoursTextBox.Text);
+            // Get hourly rate from TextBox
+            bool isValidHourlyRate = float.TryParse(hourlyRateTextBox.Text, out float hourlyRate);
+            bool isValidHours = int.TryParse(hoursTextBox.Text, out int hours);
 
-            float brutojaarwedde = hourlyRate * hours;
-            float belasting = brutojaarwedde * 0.3F;
-            float nettojaarwedde = brutojaarwedde - belasting;
+            if (isValidHourlyRate && isValidHours) 
+            {
+                float brutojaarwedde = hourlyRate * hours;
+                float belasting = brutojaarwedde * 0.3F;
+                float nettojaarwedde = brutojaarwedde - belasting;
 
-            outputTextBox.Text = $"LOONFICHE VAN {employeeName}\n" +
-                $"\nAantal gewerkte uren: {hours}" +
-                $"\nUurloon: € {hourlyRate}" +
-                $"\nBrutojaarwedde: € {brutojaarwedde}" +
-                $"\nBelasting: € {belasting}" +
-                $"\nNettojaarwedde: € {nettojaarwedde}";
+                outputTextBox.Text = $"LOONFICHE VAN {employeeName}\n" +
+                                     $"\nAantal gewerkte uren: {hours}" +
+                                     $"\nUurloon: € {hourlyRate}" +
+                                     $"\nBrutojaarwedde: € {brutojaarwedde:N2}" +
+                                     $"\nBelasting: € {belasting:N2}" +
+                                     $"\nNettojaarwedde: € {nettojaarwedde:N2}";
+            } else
+            {
+                outputTextBox.Text = "Invalid input.";
+            }
+
+
+
+
         }
     }
 }
