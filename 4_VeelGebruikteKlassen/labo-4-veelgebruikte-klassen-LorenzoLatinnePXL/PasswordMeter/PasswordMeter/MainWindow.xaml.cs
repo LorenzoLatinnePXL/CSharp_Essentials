@@ -106,6 +106,53 @@ namespace PasswordMeter
                 default:
                     resultTextBlock.Text = "Je hebt een slecht wachtwoord gekozen";
                     resultTextBlock.Background = Brushes.Red;
+
+
+                    // indien passwoord == slecht, dan bouw een nieuw wachtwoord
+
+                    StringBuilder passwordBuilder = new StringBuilder();
+                    Random rng = new Random();
+
+                    // voeg vijf letters toe van naam
+
+                    // lus voor vijf letters uit gebruikersnaam
+                    for (int i = 0; i < 5; i++)
+                    {
+                        // "gebruikersnaam".Substring(startIndex, lengte) // om een letter te selecteren
+                        int willekeurigeIndex = rng.Next(0, inputUserName.Length);
+                        string willekeurigeLetter = inputUserName.Substring(willekeurigeIndex, 1);
+
+                        passwordBuilder.Append(willekeurigeLetter);
+                    }
+
+                    // voeg vijf random cijfers toe
+                    for (int i = 0; i < 5; i++)
+                    {
+                        int willekeurigCijfer = rng.Next(0, 10);
+                        passwordBuilder.Append(willekeurigCijfer);
+                    }
+
+
+                    // voeg twee letters toe van naam + maak er hoofdletters van
+                    for (int i = 0; i < 2; i++)
+                    {
+                        int willekeurigeIndex = rng.Next(0, inputUserName.Length);
+                        string willekeurigeLetter = inputUserName.Substring(willekeurigeIndex, 1);
+
+                        passwordBuilder.Append(willekeurigeLetter.ToUpper());
+                    }
+
+
+                    // voeg 1 tot 5 uitroeptekens toe
+                    int WillekeurigeHoeveelheidUitroepingstekens = rng.Next(1, 6);
+
+                    for (int i = 0; i < WillekeurigeHoeveelheidUitroepingstekens; i++)
+                    {
+                        passwordBuilder.Append("!");
+                    }
+
+                    resultTextBlock.Text += $"\n\nJe kan beter {passwordBuilder.ToString()} gebruiken als wachtwoord.";
+
                     break;
             }
 
