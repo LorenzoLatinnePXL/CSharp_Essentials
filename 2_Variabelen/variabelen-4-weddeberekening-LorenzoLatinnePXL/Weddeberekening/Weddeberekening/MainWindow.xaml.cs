@@ -25,58 +25,51 @@ namespace Weddeberekening
             InitializeComponent();
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        private void hourlyWageTextBox_Loaded(object sender, RoutedEventArgs e)
         {
-            employeeNameTextBox.Clear();
-            hoursTextBox.Clear();
-            hourlyRateTextBox.Clear();
+            float defaultHourlyWage = 17.85F;
+            int defaultNumberOfHours = 1686;
+            hourlyWageTextBox.Text = $"{defaultHourlyWage}";
+            numberOfHoursTextBox.Text = $"{defaultNumberOfHours}";
         }
 
-        private void hourlyRateTextBox_Loaded(object sender, RoutedEventArgs e)
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
-            double defaultHourlyRate = 17.85;
-            hourlyRateTextBox.Text = defaultHourlyRate.ToString();
-        }
+            string employeeName = employeeTextBox.Text;
+            bool isValidHourlyWage = float.TryParse(hourlyWageTextBox.Text, out float hourlyWage);
+            bool isValidNumberOfHours = int.TryParse(numberOfHoursTextBox.Text, out int numberOfHours);
 
-        private void hoursTextBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            int defaultHours = 1686;
-            hoursTextBox.Text = defaultHours.ToString();
-        }
-
-        private void CalculateButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Get employee name from TextBox
-            string employeeName = employeeNameTextBox.Text;
-            // Get hourly rate from TextBox
-            bool isValidHourlyRate = float.TryParse(hourlyRateTextBox.Text, out float hourlyRate);
-            bool isValidHours = int.TryParse(hoursTextBox.Text, out int hours);
-
-            if (isValidHourlyRate && isValidHours) 
+            if (isValidHourlyWage && isValidNumberOfHours)
             {
-                float brutojaarwedde = hourlyRate * hours;
-                float belasting = brutojaarwedde * 0.3F;
+                float brutojaarwedde = numberOfHours * hourlyWage;
+                float belasting = brutojaarwedde * 0.30F;
                 float nettojaarwedde = brutojaarwedde - belasting;
-
-                outputTextBox.Text = $"LOONFICHE VAN {employeeName}\n" +
-                                     $"\nAantal gewerkte uren: {hours}" +
-                                     $"\nUurloon: € {hourlyRate}" +
-                                     $"\nBrutojaarwedde: € {brutojaarwedde:N2}" +
-                                     $"\nBelasting: € {belasting:N2}" +
-                                     $"\nNettojaarwedde: € {nettojaarwedde:N2}";
+                resultTextBox.Text = $"LOONFICHE VAN {employeeName}\n" +
+                $"\n" +
+                $"Aantal gewerkte uren: {numberOfHours}\n" +
+                $"Uurloon: € {hourlyWage:N2}\n" +
+                $"Brutojaarwedde: € {brutojaarwedde:N2}\n" +
+                $"Belasting: € {belasting:N2}\n" +
+                $"Nettojaarwedde: € {nettojaarwedde:N2}";
             } else
             {
-                outputTextBox.Text = "Invalid input.";
+                resultTextBox.Text = "Invalid input.";
             }
+        }
 
-
-
-
+        private void clearButton_Click(object sender, RoutedEventArgs e)
+        {
+            employeeTextBox.Clear();
+            resultTextBox.Clear();
+            float defaultHourlyWage = 17.85F;
+            int defaultNumberOfHours = 1686;
+            hourlyWageTextBox.Text = $"{defaultHourlyWage}";
+            numberOfHoursTextBox.Text = $"{defaultNumberOfHours}";
         }
     }
 }

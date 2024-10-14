@@ -10,13 +10,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="93,63,0,0" TextWrapping="Wrap" Text="Personeelslid" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="93,113,0,0" TextWrapping="Wrap" Text="Uurloon" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="93,163,0,0" TextWrapping="Wrap" Text="Aantal uren" VerticalAlignment="Top"/>
-        <TextBox x:Name="employeeNameTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="190,63,0,0" VerticalAlignment="Top" Width="170" Height="30"/>
-        <TextBox x:Name="hourlyRateTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="190,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="30" Loaded="hourlyRateTextBox_Loaded"/>
-        <TextBox x:Name="hoursTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="190,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="60" Height="30" Loaded="hoursTextBox_Loaded"/>
-        <Button x:Name="CalculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="CalculateButton_Click"/>
-        <Button x:Name="ClearButton" Content="Wissen" HorizontalAlignment="Left" Margin="420,110,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="ClearButton_Click"/>
-        <Button x:Name="CloseButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="420,160,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="CloseButton_Click"/>
-        <TextBox x:Name="outputTextBox" Margin="93,217,287,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="185" IsEnabled="False"/>
+        <TextBox x:Name="employeeTextBox" HorizontalAlignment="Left" Margin="190,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="hourlyWageTextBox" HorizontalAlignment="Left" Margin="190,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="30" Loaded="hourlyWageTextBox_Loaded" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="numberOfHoursTextBox" HorizontalAlignment="Left" Margin="190,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="420,60,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="calculateButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="420,110,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="clearButton_Click"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="420,160,0,0" VerticalAlignment="Top" Height="33" Width="93" Click="closeButton_Click"/>
+        <TextBox x:Name="resultTextBox" Margin="93,217,287,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="185" IsEnabled="False"/>
 
     </Grid>
 </Window>
