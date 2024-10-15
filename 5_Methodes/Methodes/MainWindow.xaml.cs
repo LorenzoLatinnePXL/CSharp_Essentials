@@ -24,20 +24,22 @@ namespace Methodes
         // Deel 1
         private void firstAddButton_Click(object sender, RoutedEventArgs e)
         {
-            int number = int.Parse(totalSumTextBox.Text);
-            number += 1;
-            totalSumTextBox.Text = number.ToString();
+            AddToTotalSum();
         }
 
         private void secondAddButton_Click(object sender, RoutedEventArgs e)
         {
-            int number = int.Parse(totalSumTextBox.Text);
-            number += 1;
-            totalSumTextBox.Text = number.ToString();
+            AddToTotalSum();
         }
 
         private void thirdAddButton_Click(object sender, RoutedEventArgs e)
         {
+            AddToTotalSum();
+        }
+
+        private void AddToTotalSum()
+        {
+            // Auto format: eerst code selecteren, dan CTRL + K + F
             int number = int.Parse(totalSumTextBox.Text);
             number += 1;
             totalSumTextBox.Text = number.ToString();
