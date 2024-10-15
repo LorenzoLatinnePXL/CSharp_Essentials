@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace PasswordMeter
 {
     /// <summary>
@@ -152,6 +153,18 @@ namespace PasswordMeter
                     }
 
                     resultTextBlock.Text += $"\n\nJe kan beter {passwordBuilder.ToString()} gebruiken als wachtwoord.";
+
+                    MessageBoxResult result = 
+                        MessageBox.Show(
+                            $"Wil je het voorgestelde wachtwoord: {passwordBuilder.ToString()} gebruiken?", 
+                            "Voorgestelde wachtwoord", 
+                            MessageBoxButton.YesNo, 
+                            MessageBoxImage.Question);
+
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        passwordTextBox.Text = passwordBuilder.ToString();
+                    }
 
                     break;
             }
