@@ -17,13 +17,16 @@
         </GroupBox>
         <GroupBox Header="Deel 3" Margin="10">
             <StackPanel x:Name="secondPanel" MinWidth="120">
-                <!-- Paste XAML here -->
+                <Button Content="- 1 (By Value)" Height="24" Width="100" Margin="10" Name="subtractByValButton" Click="subtractByValButton_Click"/>
+                <TextBox Name="resultByValTextBox" Text="100" Margin="10 0" TextAlignment="Right"/>
+                <Button Content="- 1 (By Ref)" Height="24" Width="100" Margin="10" Name="subtractByRefButton" Click="subtractByRefButton_Click"/>
+                <TextBox Name="resultByRefTextBox" Text="100" Margin="10 0" TextAlignment="Right"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Deel 4" Margin="10" MinWidth="120">
             <StackPanel x:Name="thirdPanel">
                 <TextBox x:Name="inputTextBox" Width="100" Margin="10"/>
-                <Button Content="Valideer" Height="24" Width="100" Name="validateButton" Margin="10 0"/>
+                <Button Content="Valideer" Height="24" Width="100" Name="validateButton" Margin="10 0" Click="validateButton_Click"/>
             </StackPanel>
         </GroupBox>
     </StackPanel>
