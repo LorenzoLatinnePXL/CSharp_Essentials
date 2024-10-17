@@ -63,6 +63,7 @@ namespace Iteratie_Oefeningen_Monitoriaat
                 }
                 Console.WriteLine($"!{input2} = {factorialSteps}");
             }
+            Console.WriteLine();
 
             // Oefening 5
             Console.WriteLine("Oefening 5: Berekenen van het kwadraat tot een gegeven getal");
@@ -94,22 +95,26 @@ namespace Iteratie_Oefeningen_Monitoriaat
                     input4 = Console.ReadLine();
                     isValidNumber4 = int.TryParse(input4, out product1);
                 }
+
                 Console.WriteLine("Geef een tweede geheel getal.");
                 string input5 = Console.ReadLine();
                 bool isValidNumber5 = int.TryParse(input5, out int product2);
+
                 while (!isValidNumber5)
                 {
                     Console.WriteLine("Geef een tweede geheel getal.");
                     input5 = Console.ReadLine();
                     isValidNumber5 = int.TryParse(input5, out product2);
                 }
+
                 if (isValidNumber4 && isValidNumber5)
                 {
                     Console.WriteLine($"Het product tussen de twee getallen is: {product1 * product2}");
                 }
 
-                    Console.WriteLine("Wil je nog een ander product berekenen? Ja/Nee");
-                    antwoord = Console.ReadLine().ToLower();
+                Console.WriteLine("Wil je nog een ander product berekenen? Ja/Nee");
+                antwoord = Console.ReadLine().ToLower();
+
             } while (antwoord == "ja");
 
             // Oefening 7

@@ -63,6 +63,7 @@ namespace Reiskost
                             break;
 
                         default:
+                            baseFlightPrice *= 1.00F * persons;
                             break;
                     }
                 }
