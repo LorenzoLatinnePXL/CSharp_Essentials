@@ -1,0 +1,19 @@
+﻿<Window x:Class="Faculteit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Faculteit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="375" Width="350">
+    <Grid>
+        <Label Content="Getal:" HorizontalAlignment="Left" Margin="94,62,0,0" VerticalAlignment="Top" Width="125" Height="25" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Margin="94,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="20" VerticalContentAlignment="Center" Loaded="inputTextBox_Loaded"/>
+        <Label Content="Resultaat:" HorizontalAlignment="Left" Margin="94,127,0,0" VerticalAlignment="Top" Width="125" Height="25"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Margin="94,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Height="20" VerticalContentAlignment="Center" IsEnabled="False"/>
+        <Button x:Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="94,215,0,0" VerticalAlignment="Top" Width="125" Height="20" IsDefault="True" Click="calculateButton_Click"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="94,250,0,0" VerticalAlignment="Top" Width="125" Height="20" IsCancel="True" Click="closeButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="94,285,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="clearButton_Click"/>
+
+    </Grid>
+</Window>
