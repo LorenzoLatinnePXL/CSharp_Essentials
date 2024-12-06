@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfDictionaryDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDictionaryDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <ComboBox Name="TestComboBox" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Option1</ComboBoxItem>
+            <ComboBoxItem>Option2</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="TestComboBox2" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Option1</ComboBoxItem>
+            <ComboBoxItem>Option2</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="TestComboBox3" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Option1</ComboBoxItem>
+            <ComboBoxItem>Option2</ComboBoxItem>
+        </ComboBox>
+        <Label Name="TestLabel1"></Label>
+        <Label Name="TestLabel2"></Label>
+        <Label Name="TestLabel3"></Label>
+    </StackPanel>
+</Window>

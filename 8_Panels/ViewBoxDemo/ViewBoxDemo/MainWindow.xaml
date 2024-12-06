@@ -1,0 +1,44 @@
+﻿<Window x:Class="ViewBoxDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ViewBoxDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--<Viewbox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Label Background="AliceBlue" Grid.ColumnSpan="2"
+               FontSize="20">WELKOM</Label>
+            <Label Background="Aqua" Grid.Row="1">Gebruikersnaam</Label>
+            <Label Background="LightBlue" Grid.Row="2">Wachtword</Label>
+        </Grid>
+    </Viewbox>-->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label Background="AliceBlue" Grid.ColumnSpan="2"
+               FontSize="20">WELKOM</Label>
+            <Viewbox Grid.Row="1">
+                <Label Background="Aqua">Gebruikersnaam</Label>
+            </Viewbox>
+        <Label Background="LightBlue" Grid.Row="2">Wachtword</Label>
+    </Grid>
+</Window>
